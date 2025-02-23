@@ -1,29 +1,28 @@
 
 import { Button } from "@/components/ui/button";
-import { Search, LogIn, UserPlus } from "lucide-react";
 
 export const Navigation = () => {
   return (
-    <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 py-4 px-6 shadow-sm">
+    <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 py-4 px-8 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <span className="text-primary text-2xl font-bold">Feasto</span>
-        </div>
+        <a href="/" className="flex items-center text-[1.8rem] font-bold uppercase tracking-[2px] text-[#FF6B35]">
+          <span>Feasto</span>
+        </a>
         
-        <div className="hidden md:flex items-center space-x-6">
-          <Button variant="ghost" className="text-gray-600 hover:text-primary transition-colors">
+        <div className="flex items-center gap-6">
+          <a href="/add-restaurant" className="text-[#FF6B35] font-semibold hover:text-[#FF8C00] transition-colors relative group">
             Add Restaurant
-          </Button>
+            <span className="absolute w-0 h-0.5 bg-[#FF6B35] bottom-[-5px] left-0 transition-all duration-300 group-hover:w-full"></span>
+          </a>
           
-          <Button variant="ghost" className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors">
-            <LogIn className="w-4 h-4" />
-            <span>Login</span>
-          </Button>
+          <a href="/login" className="text-[#FF6B35] font-semibold hover:text-[#FF8C00] transition-colors relative group">
+            Login
+            <span className="absolute w-0 h-0.5 bg-[#FF6B35] bottom-[-5px] left-0 transition-all duration-300 group-hover:w-full"></span>
+          </a>
           
-          <Button className="bg-primary text-white hover:bg-primary/90 transition-colors flex items-center space-x-2">
-            <UserPlus className="w-4 h-4" />
-            <span>Sign Up</span>
-          </Button>
+          <a href="/signup" className="bg-[#FF6B35] text-white font-semibold px-6 py-2 rounded-full hover:bg-[#FF8C00] transition-colors">
+            Sign Up
+          </a>
         </div>
       </div>
     </nav>
