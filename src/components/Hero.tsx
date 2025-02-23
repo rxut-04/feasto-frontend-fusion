@@ -11,29 +11,30 @@ export const Hero = () => {
         }}
       />
       
-      <div className="relative h-full flex items-center justify-center px-6">
-        <div className="bg-white/10 backdrop-blur-[10px] p-14 rounded-2xl text-center text-white max-w-[800px] w-[90%] shadow-lg border border-white/20 transform hover:-translate-y-1 transition-transform duration-300">
-          <h1 className="text-5xl font-bold mb-6 tracking-tight text-shadow animate-[slideDown_0.8s_ease] leading-tight">
-            Feasto
-          </h1>
-          
-          <p className="text-xl mb-10 text-white/90 font-normal animate-[slideDown_0.8s_ease_0.2s]">
-            Savor the Flavor, Delivered to Your Door
-          </p>
-          
-          <form className="flex gap-2 justify-center max-w-[600px] mx-auto animate-[fadeIn_1s_ease_0.4s]">
+      <div className="relative h-full max-w-7xl mx-auto px-6 flex flex-col items-center justify-center text-white">
+        <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
+          Feasto
+        </h1>
+        
+        <p className="text-xl md:text-2xl mb-8 text-center max-w-2xl animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          Discover the finest cuisine, delivered to your doorstep
+        </p>
+        
+        <div className="w-full max-w-xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <div className="relative">
             <input
               type="text"
-              placeholder="Search for restaurants or dishes"
-              className="flex-1 px-6 py-4 text-base rounded-xl bg-white/95 text-gray-800 placeholder:text-gray-500 shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#ff9900]/20 focus:translate-y-[-2px]"
+              placeholder="Search for restaurants or dishes..."
+              className="w-full h-14 pl-12 pr-4 rounded-full bg-white/95 backdrop-blur-sm text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-primary border-none"
             />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <button
               type="submit"
-              className="px-8 py-4 text-base font-semibold bg-[#ff9900] text-white rounded-xl shadow-md hover:bg-[#ff8800] transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg active:translate-y-0 active:shadow-sm"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary text-white hover:bg-primary/90 transition-colors rounded-full px-6 h-10 py-2"
             >
               Search
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
